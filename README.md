@@ -16,10 +16,11 @@ Docker uses the LXC containers for the container service
 docker run ansible | runs the instance of an ansible application on the docker host if it exists in the docker host else it pulls the image from docker hub and runs the container 
 docker run ansible | It runs the conatienr in `Foreground or the attached mode` in which the container's standard input, output, and error streams in real time, we cant use that partiocualr terminal for the executing the other commands as it is in attached mode
 docker run -d ansible | runs the container in the detach mode
+docker run -it centos bash | Docker runs and logins into the bash container automatically 
 docker attach container-id(first 5 letters) | to go back to the running docker conatiner in the detach mode
 docker ps | used to see the running containers
 docker ps -a | used to see all the running and the stopped containers
-docker stop container-name | to stop the running container
+docker stop container-name | to stop/forcer-kill the running container
 docker rm container-name | to remove the docker container for good
 docker images | see available images already in our docker host
 docker rmi ansible | to remove the ansible image from our docker host
@@ -36,3 +37,5 @@ docker exec container-name cat /etc/hosts | exec is the execute command used to 
 ## Docker Editions
 1. Community Edition
 2. Enterprise Edition
+
+
